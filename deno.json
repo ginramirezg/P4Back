@@ -1,11 +1,19 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "dev": "deno run --env -A --watch main.ts"
   },
   "imports": {
     "@apollo/server": "npm:@apollo/server@^4.11.2",
     "@std/assert": "jsr:@std/assert@1",
     "graphql": "npm:graphql@^16.9.0",
     "mongodb": "npm:mongodb@^6.11.0"
+  },
+  "deploy": {
+    "project": "16535880-1b0a-456a-b529-717e54c2a819",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "main.ts"
   }
 }
